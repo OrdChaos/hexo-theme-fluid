@@ -40,7 +40,7 @@ async function siteStats() {
   try {
     const response = await fetch(`${request_url}?${params}`, request_header);
     const data = await response.json();
-    const uniqueVisitors = data.uniques.value; // 获取独立访客数
+    const uniqueVisitors = data.visitors.value; // 获取独立访客数
     const pageViews = data.pageviews.value; // 获取页面浏览量
 
     let pvCtn = document.querySelector("#umami-site-pv-container");
